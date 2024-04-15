@@ -1,8 +1,18 @@
 .mapPlotContainer {
-    width: 100%;
-    height: calc(100vh - 88px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(20, 187, 228);
+  width: 100%;
+  height: calc(100vh - 88px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b3e3ec;
+}
+
+.mapPlotContainer :hover .shape {
+  opacity: 0.4;
+  filter: saturate(35%);
+}
+
+.mapPlotContainer .shape:hover {
+  opacity: 1;
+  filter: saturate(100%);
 }

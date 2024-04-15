@@ -13,7 +13,7 @@ export const MapPlot = ({ width, height, data }: MapProps) => {
   const projection = d3
     .geoMercator()
     .scale(width)
-    .center([10, 35]);
+    .center([40, 40]);
 
   const geoPathGenerator = d3.geoPath().projection(projection);
 
@@ -23,10 +23,11 @@ export const MapPlot = ({ width, height, data }: MapProps) => {
       return (
         <path
           key={shape.id}
+          className={styles.shape}
           d={geoPathGenerator(shape)}
-          stroke="lightGrey"
+          stroke="black"
           strokeWidth={0.5}
-          fill="black"
+          fill="#6f777d"
           fillOpacity={0.7}
         />
       );
